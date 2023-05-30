@@ -6,7 +6,7 @@
 
 
 .main{
-    background-image: url("/vookadweb/html/assets/background.jpg");
+    background-image: url("background.jpg");
     background-repeat: none;
     /* background-position: center; */
     height: 70vh;
