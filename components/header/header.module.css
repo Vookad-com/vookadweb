@@ -1,0 +1,14 @@
+.nav{
+    border-bottom: 1px solid var(--yellow);
+    /* width: 100% !important; */
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
