@@ -206,10 +206,10 @@
 }
 
 .faqItem{
-    background-color: #000;
-    color: #fff;
-    border-bottom: #fff 2px solid;
-    padding: 1rem;
+    background-color: #000 !important;
+    color: #fff !important;
+    border-bottom: #fff 2px solid !important;
+    padding: 1rem !important;
 }
 
 .end{
