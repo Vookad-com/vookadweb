@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
     <div className={styles.footerContainer}>
       <div className={styles.footerContent}>
-        <div className={`${styles.sitemap} grid grid-cols-5 gap-2`}>
+        <div className={`${styles.sitemap} grid md:grid-cols-5 gap-2 grid-cols-2`}>
           <div className={`${styles.siteCol}`}>
             <h4>
               Our Suffering
@@ -99,7 +99,7 @@ export default function Footer() {
             <h4>
               Connect with us
             </h4>
-            <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+            <ul className="grid grid-cols-4 gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 <li>
                 <a
                     href="/"
@@ -164,12 +164,12 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className={styles.copyright}>
+        <div className={`${styles.copyright}`}>
             <img src="/assets/vookad.svg" alt="" />
             <div className={styles.copyrightText}>
                 Copyright © 2023 Neuvision Technologies Pvt. Ltd. All rights reserved.
             </div>
-            <div className={styles.terms}>
+            <div className={`col-span-2 ${styles.terms}`}>
                 <ul className={styles.Flex}>
                     <li className={styles.Flexitem}><Link href={'#'}>Press release</Link></li>
                     <li className={styles.Flexitem}><Link href={'#'}>Regulatory</Link></li>
@@ -177,7 +177,7 @@ export default function Footer() {
                     <li className={styles.Flexitem}><Link href={'#'}>Terms & conditions</Link></li>
                 </ul>
             </div>
-      </div>
+        </div>
     </div>
     </div>
   </footer>

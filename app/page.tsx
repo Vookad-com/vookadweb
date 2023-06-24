@@ -10,6 +10,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Footer from '@/components/footer/footer';
+import 'swiper/css/bundle';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 
 const diffArr = [
   {
@@ -231,7 +234,7 @@ export default function Home() {
           <h2>
             What makes Vookad different ?
           </h2>
-          <div className={`${styles.cards} grid grid-cols-3 gap-6`}>
+          <div className={`${styles.cards} grid sm:grid-cols-3 grid-cols-2 gap-6`}>
               {diffArr.map(diff => {
                 return (
                   <div className={styles.card} key={diff.ico}>
@@ -246,6 +249,29 @@ export default function Home() {
                 )
               })}
           </div>
+          <Swiper
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination]}
+          className={styles.smCards}
+        >
+          {diffArr.map(diff => {
+                return (
+                  <SwiperSlide>
+                    <div className={styles.card} key={diff.ico}>
+                    <div className={styles.imgContainer}>
+                      <Image width={50} height={50} src={diff.ico} alt={diff.title} />
+                    </div>
+                    <div className={styles.diffcontent}>
+                      <h3>{diff.title}</h3>
+                      <p>{diff.text}</p>
+                    </div>
+                  </div>
+                  </SwiperSlide>
+                )
+              })}
+      </Swiper>
         </div>
       </section>
       <section className={styles.plans}>
@@ -253,7 +279,7 @@ export default function Home() {
           <h2>
             Choose a plan as per your needs
           </h2>
-          <div className={`${styles.cards2} grid grid-cols-3 gap-4`}>
+          <div className={`${styles.cards2} grid grid-cols-1 gap-4 md:grid-cols-3 `}>
               {plans.map((plan,i) => {
                 return (
                   <div className={styles.card2} key={i}>
