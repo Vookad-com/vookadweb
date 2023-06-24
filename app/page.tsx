@@ -235,7 +235,7 @@ export default function Home() {
             What makes Vookad different ?
           </h2>
           <div className={`${styles.cards} grid sm:grid-cols-3 grid-cols-2 gap-6`}>
-              {diffArr.map(diff => {
+              {diffArr.map((diff) => {
                 return (
                   <div className={styles.card} key={diff.ico}>
                     <div className={styles.imgContainer}>
@@ -256,9 +256,9 @@ export default function Home() {
           modules={[Pagination]}
           className={styles.smCards}
         >
-          {diffArr.map(diff => {
+          {diffArr.map((diff) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={diff.ico}>
                     <div className={styles.card} key={diff.ico}>
                     <div className={styles.imgContainer}>
                       <Image width={50} height={50} src={diff.ico} alt={diff.title} />
